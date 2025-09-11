@@ -15,6 +15,11 @@ export default function Home() {
                     Week 3 Assignment
                 </Link>
             </div>
+            <div>
+                <Link className="underline text-blue-500" href="/week-4">
+                    Week 4 Assignment
+                </Link>
+            </div>
         </main>
     );
 }
