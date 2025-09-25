@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+
 
 export default function Item({name, quantity, category}) {
     return (
@@ -9,8 +9,3 @@ export default function Item({name, quantity, category}) {
     );
 }
 
-Item.propTypes = {
-    name: PropTypes.string.isRequired,
-    quantity: PropTypes.number.isRequired,
-    category: PropTypes.string.isRequired,
-};
