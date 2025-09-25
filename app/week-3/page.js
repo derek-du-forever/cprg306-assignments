@@ -1,10 +1,10 @@
-import ItemList from "@/app/week-3/item-list";
+import ItemList from '@/app/week-3/item-list';
 
-export default function Page(){
-    return(
+export default function Page() {
+    return (
         <main className="mx-auto max-w-md p-4">
             <h1 className="text-4xl font-bold">Shopping List</h1>
-            <ItemList></ItemList>
+            <ItemList />
         </main>
     );
 }
