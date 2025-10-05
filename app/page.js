@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Home() {
     return (
@@ -18,6 +18,11 @@ export default function Home() {
             <div>
                 <Link className="underline text-blue-500" href="/week-4">
                     Week 4 Assignment
+                </Link>
+            </div>
+            <div>
+                <Link className="underline text-blue-500" href="/week-5">
+                    Week 5 Assignment
                 </Link>
             </div>
         </main>
