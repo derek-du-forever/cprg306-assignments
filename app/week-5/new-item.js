@@ -17,10 +17,6 @@ export default function NewItem() {
         setQuantity(quantity - 1);
     };
 
-    const btnClass = disabled => {
-        return `px-3 py-1 rounded font-extrabold text-lg text-white ${disabled ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`;
-    };
-
     const handleSubmit = e => {
         e.preventDefault();
         const message = `Item Added: ${name}, Quantity: ${quantity}, Category: ${category}`;

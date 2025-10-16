@@ -15,13 +15,6 @@ export default function NewItem() {
         setQuantity(quantity - 1);
     };
 
-    // Function to return appropriate CSS classes based on whether the button is disabled
-    const btnClass = disabled => {
-        // If disabled, return gray background and disabled cursor style
-        // If not disabled, return blue background with hover effect
-        return `px-3 py-1 rounded font-extrabold text-lg text-white ${disabled ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`;
-    };
-
     return (
         // Main container: centered with white background and padding
         <main className="mx-auto my-4 justify-center flex space-x-4 bg-white w-45 p-2 ">
