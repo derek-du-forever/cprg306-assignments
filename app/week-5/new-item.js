@@ -8,21 +8,13 @@ export default function NewItem() {
     const [category, setCategory] = useState('produce');
 
     const increment = () => {
-        setQuantity(prev => {
-            if (prev < 20) {
-                return prev + 1;
-            }
-            return prev;
-        });
+        if (quantity >= 20) return;
+        setQuantity(quantity + 1);
     };
 
     const decrement = () => {
-        setQuantity(prev => {
-            if (prev > 1) {
-                return prev - 1;
-            }
-            return prev;
-        });
+        if (quantity <= 1) return;
+        setQuantity(quantity - 1);
     };
 
     const btnClass = disabled => {
@@ -31,9 +23,9 @@ export default function NewItem() {
 
     const handleSubmit = e => {
         e.preventDefault();
-        alert(
-            `Item Added: ${name}, Quantity: ${quantity}, Category: ${category}`
-        );
+        const message = `Item Added: ${name}, Quantity: ${quantity}, Category: ${category}`;
+        console.log(message);
+        alert(message);
         // Reset form
         setName('');
         setQuantity(1);
@@ -57,7 +49,7 @@ export default function NewItem() {
                 <div className="flex items-center space-x-2">
                     <button
                         type="button"
-                        className={btnClass(quantity <= 1)}
+                        className={`px-3 py-1 rounded font-extrabold text-lg text-white ${quantity <= 1 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
                         onClick={() => decrement()}
                         disabled={quantity <= 1}
                     >
@@ -71,7 +63,7 @@ export default function NewItem() {
                     />
                     <button
                         type="button"
-                        className={btnClass(quantity >= 20)}
+                        className={`px-3 py-1 rounded font-extrabold text-lg text-white ${quantity >= 20 ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'}`}
                         onClick={() => increment()}
                         disabled={quantity >= 20}
                     >
