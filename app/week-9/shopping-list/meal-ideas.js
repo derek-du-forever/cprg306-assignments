@@ -20,7 +20,7 @@ export default function MealIdeas({ ingredient }) {
                 Meal ideas for “{ingredient}”
             </h3>
             {meals.length === 0 ? (
-                <p class="text-sm text-gray-500">No meals found.</p>
+                <p className="text-sm text-gray-500">No meals found.</p>
             ) : (
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {meals.map(meal => (
