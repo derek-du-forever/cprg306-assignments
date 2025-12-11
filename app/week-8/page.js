@@ -13,7 +13,7 @@ export default function Page() {
     const [items, setItems] = useState(itemsData);
     const [selectedItemName, setSelectedItemName] = useState(null);
     const handleItemSelect = item => {
-        let name = item.name.split(' ')[0];
+        let name = item.name.split(',')[0];
         name = removeEmoji(name);
         setSelectedItemName(name);
     };
